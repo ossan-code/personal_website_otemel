@@ -10,6 +10,16 @@
     <style>
         body { font-family: 'Space Grotesk', sans-serif; }
         .glow-text { text-shadow: 0 0 20px rgba(6, 182, 212, 0.5); }
+        .glow-text-red { text-shadow: 0 0 20px rgba(225, 29, 72, 0.6); }
+        .card-hover:hover { box-shadow: 0 10px 30px -10px rgba(6, 182, 212, 0.3); transform: translateY(-2px); }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #0f172a; }
+        ::-webkit-scrollbar-thumb { background: #06b6d4; border-radius: 10px; }
+
+        input[type=range] { -webkit-appearance: none; background: transparent; }
+        input[type=range]::-webkit-slider-thumb { -webkit-appearance: none; height: 16px; width: 16px; background: #06b6d4; cursor: pointer; margin-top: -6px; border-radius: 50%; box-shadow: 0 0 10px #06b6d4; }
+        input[type=range]::-webkit-slider-runnable-track { width: 100%; height: 4px; cursor: pointer; background: #1e293b; border-radius: 2px; }
     </style>
 </head>
 <body class="bg-slate-950 text-slate-300 antialiased selection:bg-cyan-500 selection:text-white">
@@ -19,8 +29,8 @@
             <div class="text-xl font-bold tracking-tighter text-white">Dr. Oguzhan Temel<span class="text-cyan-400">.</span></div>
             <div class="hidden md:flex space-x-6 text-sm font-medium">
                 <a href="#expertise" class="hover:text-cyan-400 transition-colors">Expertise</a>
+                <a href="#insights" class="hover:text-cyan-400 transition-colors">Insights</a>
                 <a href="#experience" class="hover:text-cyan-400 transition-colors">Experience</a>
-                <a href="#education" class="hover:text-cyan-400 transition-colors">Education</a>
             </div>
             <a href="mailto:oguzhantemel@gmail.com" class="px-5 py-2 bg-cyan-500/10 text-cyan-400 border border-cyan-500/50 rounded-full text-sm font-semibold hover:bg-cyan-500 hover:text-slate-950 transition-all">
                 Contact Me
@@ -30,7 +40,6 @@
 
     <header class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20">
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-cyan-900/20 rounded-full blur-[120px] -z-10"></div>
-        
         <div class="max-w-4xl mx-auto px-6 text-center z-10">
             <p class="text-cyan-400 font-semibold tracking-widest uppercase text-sm mb-4">PhD Micro & Nanotechnology</p>
             <h1 class="text-5xl md:text-7xl font-bold text-white mb-6 tracking-tight">
@@ -38,42 +47,39 @@
                 <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-600 glow-text">III-V Semiconductors</span>
             </h1>
             <p class="text-lg md:text-xl text-slate-400 mb-10 max-w-2xl mx-auto leading-relaxed">
-                Staff R&D Engineer with 10+ years of experience. Specializing in epitaxy, opto-electronic and semiconductor device process development <strong class="text-slate-200 font-semibold">(from Visible to IR wavelengths)</strong>, and advanced device integration to bridge the gap between R&D and high-volume manufacturing.
+                Staff R&D Engineer with 10+ years of experience. Specializing in epitaxy, opto-electronic and semiconductor device process development <strong class="text-slate-200 font-semibold">(from Visible to IR wavelengths)</strong>, and advanced device integration.
             </p>
             <div class="flex justify-center gap-4">
-                <a href="#experience" class="px-8 py-3 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-full transition-all hover:shadow-[0_0_20px_rgba(6,182,212,0.4)]">
-                    View Career Track
+                <a href="#insights" class="px-8 py-3 bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-bold rounded-full transition-all hover:shadow-[0_0_20px_rgba(6,182,212,0.4)]">
+                    See Current Focus
                 </a>
             </div>
         </div>
     </header>
 
-    <section id="expertise" class="py-24 bg-slate-900 border-y border-slate-800">
+    <section id="expertise" class="py-24 bg-slate-900 border-t border-slate-800">
         <div class="max-w-6xl mx-auto px-6">
             <h2 class="text-3xl font-bold text-white mb-12 text-center">Core Competencies</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                
-                <div class="p-8 rounded-2xl bg-slate-950 border border-slate-800 hover:border-cyan-500/50 transition-colors group">
+                <div class="p-8 rounded-2xl bg-slate-950 border border-slate-800 hover:border-cyan-500/50 transition-colors group card-hover">
                     <div class="w-12 h-12 bg-slate-900 border border-slate-700 rounded-lg flex items-center justify-center mb-6 group-hover:bg-cyan-950 group-hover:border-cyan-500 transition-colors">
                         <i class="fas fa-layer-group text-xl text-cyan-400"></i>
                     </div>
                     <h3 class="text-xl font-bold text-white mb-3">Epitaxy & Materials</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">
-                        Workstream leadership for next-gen LED devices. Deep expertise in Epitaxial growth of complex opto-electronic heterostructures (InGaAlP/AlGaAs/GaAs, InP/InGaAs(P)) and epitaxial layer optimization for high device performance.
+                        Workstream leadership for next-gen LED devices. Deep expertise in Epitaxial growth of complex opto-electronic heterostructures (InGaAlP/AlGaAs/GaAs, InP/InGaAs(P)) and epitaxial layer optimization.
                     </p>
                 </div>
-
-                <div class="p-8 rounded-2xl bg-slate-950 border border-slate-800 hover:border-cyan-500/50 transition-colors group">
+                <div class="p-8 rounded-2xl bg-slate-950 border border-slate-800 hover:border-cyan-500/50 transition-colors group card-hover">
                     <div class="w-12 h-12 bg-slate-900 border border-slate-700 rounded-lg flex items-center justify-center mb-6 group-hover:bg-cyan-950 group-hover:border-cyan-500 transition-colors">
                         <i class="fas fa-microchip text-xl text-cyan-400"></i>
                     </div>
-                    <h3 class="text-xl font-bold text-white mb-3">Process & Integration</h3>
+                    <h3 class="text-xl font-bold text-white mb-3">Device Process & Integration</h3>
                     <p class="text-slate-400 text-sm leading-relaxed">
-                        End-to-end semiconductor process development for opto-electronic devices (LEDs, LASERs, Photodiode Arrays) and process integration. Pioneered device integration techniques including Micro Transfer Printing (µTP), Flip-Chip bonding and hybrid CMOS integration, wafer-level bonding and encapsulation.
+                        End-to-end semiconductor process development for opto-electronic devices (LEDs, LASERs, Photodiode Arrays). Pioneered techniques including Micro Transfer Printing (µTP), Flip-Chip bonding and hybrid CMOS integration.
                     </p>
                 </div>
-
-                <div class="p-8 rounded-2xl bg-slate-950 border border-slate-800 hover:border-cyan-500/50 transition-colors group">
+                <div class="p-8 rounded-2xl bg-slate-950 border border-slate-800 hover:border-cyan-500/50 transition-colors group card-hover">
                     <div class="w-12 h-12 bg-slate-900 border border-slate-700 rounded-lg flex items-center justify-center mb-6 group-hover:bg-cyan-950 group-hover:border-cyan-500 transition-colors">
                         <i class="fas fa-chart-line text-xl text-cyan-400"></i>
                     </div>
@@ -82,15 +88,147 @@
                         Driving root cause investigations and process transfers to volume manufacturing. Proficient in failure analysis and material characterization including SEM, XRD, AFM, SIMS, and PL mapping.
                     </p>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <section id="experience" class="py-24 bg-slate-950">
+    <section id="insights" class="py-24 bg-slate-950 border-t border-slate-800 relative overflow-hidden">
+        <div class="absolute right-0 top-0 w-96 h-96 bg-blue-900/10 rounded-full blur-[100px] -z-10"></div>
+        <div class="max-w-6xl mx-auto px-6">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <p class="text-cyan-400 font-semibold tracking-widest uppercase text-sm mb-2">The Lab Notebook</p>
+                    <h2 class="text-3xl font-bold text-white">Insights & Case Studies</h2>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="block p-6 bg-slate-900 border border-slate-800 rounded-xl hover:border-cyan-500/50 transition-all card-hover group">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="px-3 py-1 bg-cyan-500/10 text-cyan-400 text-xs font-bold rounded-full">Current Focus</span>
+                        <span class="text-slate-500 text-xs"><i class="far fa-clock"></i> Active</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">EPI Development for High Performance LEDs</h3>
+                    <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+                        Bridging the gap between novel epitaxial layer designs and mass production environments. Focusing on scaling InGaAlP/AlGaAs structures while maintaining strict quality control.
+                    </p>
+                </div>
+
+                <div onclick="openModal('hyperRedModal')" class="cursor-pointer text-left block p-6 bg-slate-900 border border-slate-800 rounded-xl hover:border-rose-500/50 transition-all card-hover group w-full relative overflow-hidden">
+                    <div class="absolute -right-4 -top-4 w-24 h-24 bg-rose-600/10 rounded-full blur-xl z-0"></div>
+                    <div class="relative z-10">
+                        <div class="flex items-center gap-3 mb-4">
+                            <span class="px-3 py-1 bg-rose-500/10 text-rose-400 border border-rose-500/20 text-xs font-bold rounded-full">Case Study</span>
+                        </div>
+                        <h3 class="text-lg font-bold text-white mb-3 group-hover:text-rose-400 transition-colors">Epitaxial Optimization: Hyper Red LEDs</h3>
+                        <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+                            Driving Wall-Plug Efficiency (WPE) from 76.8% to 78.8% in 660nm InGaAlP LEDs through advanced epitaxial structure and chip architecture optimization for horticulture applications.
+                        </p>
+                        <span class="text-rose-400 text-sm font-semibold group-hover:underline">Read details &rarr;</span>
+                    </div>
+                </div>
+
+                <div onclick="openModal('interactiveToolModal')" class="cursor-pointer block p-6 bg-slate-900 border border-slate-800 rounded-xl hover:border-cyan-500/50 transition-all card-hover group">
+                    <div class="flex items-center gap-3 mb-4">
+                        <span class="px-3 py-1 bg-purple-500/10 text-purple-400 text-xs font-bold rounded-full">Interactive Tool</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">III-V Material Spectrum Explorer</h3>
+                    <p class="text-slate-400 text-sm mb-4 leading-relaxed">
+                        An interactive resource mapping target wavelengths to corresponding semiconductor material systems, optimal substrates, and bandgap energies (eV). Features synchronized physics sliders.
+                    </p>
+                    <span class="text-cyan-400 text-sm font-semibold group-hover:underline">Launch Tool &rarr;</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="hyperRedModal" class="fixed inset-0 z-[100] hidden items-center justify-center px-4 backdrop-blur-sm bg-slate-950/80 transition-opacity">
+        <div class="bg-slate-900 border border-slate-700 rounded-2xl w-full max-w-3xl max-h-[85vh] overflow-y-auto shadow-[0_0_50px_rgba(225,29,72,0.15)] relative">
+            <button onclick="closeModal('hyperRedModal')" class="absolute top-4 right-4 text-slate-400 hover:text-white bg-slate-800 p-2 rounded-full transition-colors z-20">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="relative w-full h-48 bg-slate-800 flex items-center justify-center overflow-hidden border-b border-slate-700">
+                <div class="absolute inset-0 bg-gradient-to-br from-rose-900/40 to-slate-900 z-10"></div>
+                <div class="z-20 text-center">
+                    <i class="fas fa-microchip text-5xl text-rose-500 mb-2 glow-text-red"></i>
+                    <p class="text-rose-400 text-xs font-mono tracking-widest uppercase">660nm InGaAlP Chip</p>
+                </div>
+            </div>
+            <div class="p-8">
+                <h2 class="text-3xl font-bold text-white mb-6">WPE Optimization of ams-OSRAM Hyper Red LEDs</h2>
+                <p class="text-slate-300 mb-8 leading-relaxed">
+                    A steady trajectory of Wall-Plug Efficiency (WPE) improvement in 660nm Hyper Red LEDs, driven by systematic epitaxial refinement and advanced InGaAlP chip architectures to meet the rigorous demands of greenhouse environments.
+                </p>
+                <div class="space-y-6">
+                    <div class="p-4 rounded border border-slate-800 bg-slate-950/50">
+                        <h3 class="font-bold text-white mb-1">2022 | Baseline: OSLON™ Square</h3>
+                        <div class="text-rose-400 text-sm font-bold mb-2">WPE: 76.8%</div>
+                        <p class="text-sm text-slate-400">Established as the robust baseline utilizing a ceramic package and thin-film InGaAlP chip design.</p>
+                    </div>
+                    <div class="p-4 rounded border border-rose-500/30 bg-slate-950/80 shadow-[0_0_15px_rgba(225,29,72,0.1)]">
+                        <h3 class="font-bold text-white mb-1">2023 | 5th Gen OSLON™ Square</h3>
+                        <div class="text-rose-400 text-sm font-bold mb-2">WPE: 78.8% <span class="text-slate-500 font-normal text-xs">(at 25°C Tj)</span></div>
+                        <p class="text-sm text-slate-400">A major +2.0 percentage-point leap achieved via optimized InGaAlP epitaxial structure and significantly improved thermal droop behavior.</p>
+                    </div>
+                    <div class="p-4 rounded border border-slate-800 bg-slate-950/50">
+                        <h3 class="font-bold text-white mb-1">2024 | OSLON™ Optimal (3030)</h3>
+                        <div class="text-rose-400 text-sm font-bold mb-2">Radiant Eff: ~74.3% | Efficacy: ~4.06 µmol/J</div>
+                        <p class="text-sm text-slate-400">Portfolio expansion into compact, cost-optimized 3030 packages. Maintained strong radiant efficiency and 520 mW radiant flux.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="interactiveToolModal" class="fixed inset-0 z-[100] hidden items-center justify-center px-4 backdrop-blur-sm bg-slate-950/80 transition-opacity">
+        <div class="bg-slate-900 border border-slate-700 rounded-2xl w-full max-w-4xl max-h-[90vh] overflow-y-auto shadow-[0_0_50px_rgba(6,182,212,0.15)] relative">
+            <button onclick="closeModal('interactiveToolModal')" class="absolute top-4 right-4 text-slate-400 hover:text-white bg-slate-800 p-2 rounded-full transition-colors z-20">
+                <i class="fas fa-times"></i>
+            </button>
+
+            <div class="p-8">
+                <h2 class="text-2xl font-bold text-white mb-2">III-V Material Spectrum Explorer</h2>
+                <p class="text-slate-400 text-sm mb-8">Adjust the wavelength or bandgap to identify the appropriate material system and substrate.</p>
+
+                <div id="colorIndicator" class="w-full h-24 rounded-xl mb-8 flex items-center justify-center border border-slate-700 transition-colors duration-200" style="background-color: #06b6d4; box-shadow: inset 0 0 50px rgba(0,0,0,0.5);">
+                    <span id="regionDisplay" class="text-white font-bold text-2xl tracking-widest uppercase drop-shadow-md">Visible</span>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+                    <div class="p-4 bg-slate-950 rounded-lg border border-slate-800">
+                        <label class="flex justify-between text-sm font-bold text-cyan-400 mb-4">
+                            Wavelength (λ)
+                            <span id="wlValue" class="text-white">500 nm</span>
+                        </label>
+                        <input type="range" id="wlSlider" min="200" max="5000" value="500" class="w-full" oninput="syncSliders('wl')">
+                    </div>
+                    <div class="p-4 bg-slate-950 rounded-lg border border-slate-800">
+                        <label class="flex justify-between text-sm font-bold text-purple-400 mb-4">
+                            Bandgap Energy (Eg)
+                            <span id="egValue" class="text-white">2.48 eV</span>
+                        </label>
+                        <input type="range" id="egSlider" min="0.248" max="6.2" step="0.01" value="2.48" class="w-full" oninput="syncSliders('eg')">
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="p-6 bg-slate-800 rounded-xl border border-slate-700">
+                        <p class="text-xs text-slate-400 uppercase tracking-wider mb-1">Material System</p>
+                        <p id="materialDisplay" class="text-2xl font-bold text-white">InGaN, ZnSe alloys</p>
+                    </div>
+                    <div class="p-6 bg-slate-800 rounded-xl border border-slate-700">
+                        <p class="text-xs text-slate-400 uppercase tracking-wider mb-1">Common Substrate</p>
+                        <p id="substrateDisplay" class="text-2xl font-bold text-white">Sapphire, GaAs</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section id="experience" class="py-24 bg-slate-900 border-t border-slate-800">
         <div class="max-w-4xl mx-auto px-6">
             <h2 class="text-3xl font-bold text-white mb-12">Professional Experience</h2>
-            
+
             <div class="space-y-12">
                 <div class="relative pl-8 border-l border-slate-800">
                     <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-cyan-500 shadow-[0_0_10px_rgba(6,182,212,0.8)]"></div>
@@ -99,8 +237,8 @@
                     <div class="text-slate-400 text-sm mb-4">ams-OSRAM</div>
                     <ul class="list-disc list-outside ml-4 text-slate-300 text-sm space-y-2">
                         <li>Lead epitaxy workstream for next-generation opto-electronic LED applications based on InGaAlP/AlGaAs.</li>
-                        <li>Design, execute, and analyze DOEs to optimize EPI and device performance and enable continuous improvement.</li>
-                        <li>Successfully transfer developed epitaxy design and processes and novel tool platforms to mass production.</li>
+                        <li>Design, execute, and analyze DOEs to optimize EPI performance and enable continuous improvement.</li>
+                        <li>Successfully transfer developed epitaxy processes and novel tool platforms to mass production.</li>
                     </ul>
                 </div>
 
@@ -131,21 +269,21 @@
         </div>
     </section>
 
-    <section id="education" class="py-24 bg-slate-900 border-t border-slate-800">
+    <section id="education" class="py-24 bg-slate-950 border-t border-slate-800">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <h2 class="text-3xl font-bold text-white mb-12">Academic Background</h2>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-                <div class="p-6 bg-slate-950 rounded-xl border border-slate-800">
+                <div class="p-6 bg-slate-900 rounded-xl border border-slate-800 hover:border-cyan-500/30 transition-colors">
                     <h4 class="text-cyan-400 font-bold mb-1">Ph.D. Micro & Nanotechnology</h4>
                     <p class="text-white text-sm font-semibold mb-2">Middle East Technical University</p>
                     <p class="text-slate-400 text-xs">Thesis: Investigation of Solder Materials and Bond Formation for Wafer Level Packaging of MEMS Devices.</p>
                 </div>
-                <div class="p-6 bg-slate-950 rounded-xl border border-slate-800">
+                <div class="p-6 bg-slate-900 rounded-xl border border-slate-800 hover:border-cyan-500/30 transition-colors">
                     <h4 class="text-cyan-400 font-bold mb-1">M.Sc. Micro & Nanotechnology</h4>
                     <p class="text-white text-sm font-semibold mb-2">Middle East Technical University</p>
                     <p class="text-slate-400 text-xs">Thesis: Molecular Beam Epitaxy Growth of InP/InGaAs Structures for Short Wavelength Infrared Photodetectors.</p>
                 </div>
-                <div class="p-6 bg-slate-950 rounded-xl border border-slate-800">
+                <div class="p-6 bg-slate-900 rounded-xl border border-slate-800 hover:border-cyan-500/30 transition-colors">
                     <h4 class="text-cyan-400 font-bold mb-1">B.Sc. Metallurgical & Materials Eng.</h4>
                     <p class="text-white text-sm font-semibold mb-2">Middle East Technical University</p>
                     <p class="text-slate-400 text-xs">Minor in Solid State Physics. Focus on material fundamentals, electronic materials, and material characterization.</p>
@@ -154,7 +292,7 @@
         </div>
     </section>
 
-    <footer class="py-12 bg-slate-950 text-center border-t border-slate-800">
+    <footer class="py-12 bg-slate-900 text-center border-t border-slate-800">
         <div class="max-w-3xl mx-auto px-6">
             <h2 class="text-2xl font-bold text-white mb-6">Open to discussing the future of semiconductor technologies and optoelectronics.</h2>
             <div class="flex justify-center gap-6 mb-8">
@@ -165,5 +303,67 @@
         </div>
     </footer>
 
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.remove('hidden');
+            document.getElementById(modalId).classList.add('flex');
+            document.body.style.overflow = 'hidden';
+            if(modalId === 'interactiveToolModal') syncSliders('wl'); // Initialize tool
+        }
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.add('hidden');
+            document.getElementById(modalId).classList.remove('flex');
+            document.body.style.overflow = 'auto';
+        }
+        window.onclick = function(event) {
+            if (event.target.id === 'hyperRedModal') closeModal('hyperRedModal');
+            if (event.target.id === 'interactiveToolModal') closeModal('interactiveToolModal');
+        }
+
+        // III-V Interactive Tool Logic (Updated to 5000nm max)
+        const materials = [
+            {max: 399, region: 'Ultraviolet (UV)', mat: 'AlGaN / AlN', sub: 'Sapphire, SiC, GaN', color: '#4c1d95'},
+            {max: 480, region: 'Blue / Violet', mat: 'InGaN / GaN', sub: 'Sapphire, SiC, GaN', color: '#2563eb'},
+            {max: 550, region: 'Green', mat: 'InGaN, ZnSe alloys', sub: 'Sapphire, GaAs', color: '#16a34a'},
+            {max: 680, region: 'Red / Orange', mat: 'AlGaInP, GaAsP', sub: 'GaAs', color: '#dc2626'},
+            {max: 850, region: 'Near-Infrared (850nm)', mat: 'AlGaAs / GaAs', sub: 'GaAs', color: '#7f1d1d'},
+            {max: 1000, region: 'Pump (980nm)', mat: 'InGaAs / GaAs', sub: 'GaAs', color: '#450a0a'},
+            {max: 1600, region: 'Telecom (1.3/1.55μm)', mat: 'InGaAsP, InGaAlAs', sub: 'InP', color: '#1e293b'},
+            {max: 3000, region: 'Mid-Infrared (2-3μm)', mat: 'GaSb-based alloys', sub: 'GaSb', color: '#0f172a'},
+            {max: 5000, region: 'Mid/Far-IR (3-5μm)', mat: 'PbSnTe, QCLs', sub: 'PbTe, InP', color: '#020617'}
+        ];
+
+        function syncSliders(source) {
+            const wlSlider = document.getElementById('wlSlider');
+            const egSlider = document.getElementById('egSlider');
+
+            let wl, eg;
+            if (source === 'wl') {
+                wl = parseFloat(wlSlider.value);
+                eg = 1240 / wl;
+                egSlider.value = eg.toFixed(3);
+            } else {
+                eg = parseFloat(egSlider.value);
+                wl = 1240 / eg;
+                wlSlider.value = wl.toFixed(0);
+            }
+
+            document.getElementById('wlValue').innerText = wl.toFixed(0) + " nm";
+            document.getElementById('egValue').innerText = eg.toFixed(3) + " eV";
+
+            let match = materials[materials.length - 1];
+            for (let i = 0; i < materials.length; i++) {
+                if (wl <= materials[i].max) {
+                    match = materials[i];
+                    break;
+                }
+            }
+
+            document.getElementById('regionDisplay').innerText = match.region;
+            document.getElementById('materialDisplay').innerText = match.mat;
+            document.getElementById('substrateDisplay').innerText = match.sub;
+            document.getElementById('colorIndicator').style.backgroundColor = match.color;
+        }
+    </script>
 </body>
 </html>
